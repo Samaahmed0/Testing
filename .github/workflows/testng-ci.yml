@@ -1,34 +1,27 @@
 name: TestNG CI
 
-# Triggers: run this pipeline on every push or pull request to main
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   test:
-    runs-on: ubuntu-latest   # GitHub-hosted Linux machine
+    runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Download your code onto the runner
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      # Step 2: Install Java 17
-      - name: Set up Java 17
+      - name: Setup Java
         uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
 
-      # Step 3: Run Maven — this executes testng.xml via Surefire plugin
-      - name: Run TestNG Suite
+      - name: Run TestNG Tests
         run: mvn test -Dsurefire.suiteXmlFiles=src/test/resources/testng.xml
 
-      # Step 4: Upload the HTML report so you can download it later
-      - name: Upload TestNG Report
+      - name: Upload Reports
         uses: actions/upload-artifact@v4
         with:
           name: testng-reports
