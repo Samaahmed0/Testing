@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+  parallel="tests" means both <test> blocks run at the same time.
+  thread-count="2" means 2 threads run simultaneously (one per browser).
+-->
+<suite name="Exercise2 - Cross-Browser Suite" parallel="tests" thread-count="2">
+
+    <test name="ChromeTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.guru99.TestCrossBrowserLogin"/>
+        </classes>
+    </test>
+
+    <test name="FirefoxTest">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.guru99.TestCrossBrowserLogin"/>
+        </classes>
+    </test>
+
+</suite>

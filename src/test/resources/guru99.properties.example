@@ -1,0 +1,9 @@
+# Copy to guru99.properties (or set GURU99_USER / GURU99_PASS).
+# https://demo.guru99.com/ — submit your email to receive manager User ID and Password.
+
+guru99.user=
+guru99.password=
+
+# Optional — TestGuru99FundTransfer.test_Fund_Transfer_Valid is skipped if either is empty.
+guru99.payer.account=
+guru99.payee.account=

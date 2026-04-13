@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Exercise3 - Smoke Only">
+    <test name="Smoke Tests">
+        <groups>
+            <run>
+                <!-- Only Smoke group tests will run; Regression is ignored -->
+                <include name="Smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.guru99.TestBankingGroups"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Exercise1 - Lifecycle Suite">
+    <test name="E-commerce Lifecycle Test">
+        <classes>
+            <class name="com.guru99.TestEcommerceLifecycle"/>
+        </classes>
+    </test>
+</suite>
